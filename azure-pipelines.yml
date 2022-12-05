@@ -3,6 +3,8 @@
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
+# Modified to avoid charge for a service that's not subscribed, being used solely for testing
+
 trigger:
 - master
 
@@ -10,12 +12,12 @@ pool:
   vmImage: ubuntu-latest
 strategy:
   matrix:
-    Python27:
-      python.version: '2.7'
-    Python35:
-      python.version: '3.5'
-    Python36:
-      python.version: '3.6'
+    #Python27:
+    #  python.version: '2.7'
+    #Python35:
+    #  python.version: '3.5'
+    #Python36:
+    # python.version: '3.6'
     Python37:
       python.version: '3.7'
 
